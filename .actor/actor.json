@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "inmuebles24-scraper",
+    "title": "Inmuebles24 Scraper",
+    "description": "Collect Inmuebles24 property listings with prices, area, rooms, location, publisher, and photos.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "minMemoryMbytes": 1024,
+    "maxMemoryMbytes": 4096,
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "nodeJsVersion": "24",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    }
+}

@@ -1,0 +1,305 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "title": "Listing ID",
+                "description": "Inmuebles24 listing identifier",
+                "example": "151182747"
+            },
+            "title": {
+                "type": "string",
+                "title": "Title",
+                "description": "Listing title",
+                "example": "Departamento en venta en Polanco"
+            },
+            "url": {
+                "type": "string",
+                "title": "URL",
+                "description": "Listing page URL",
+                "example": "https://www.inmuebles24.com/propiedades/clasificado/veclapin-departamento-151182747.html"
+            },
+            "price": {
+                "type": "number",
+                "title": "Price",
+                "description": "Asking price in the listed currency",
+                "example": 24900000
+            },
+            "currency": {
+                "type": "string",
+                "title": "Currency",
+                "description": "Price currency as shown on the listing",
+                "example": "MN",
+                "enum": ["MN", "USD"]
+            },
+            "property_type": {
+                "type": "string",
+                "title": "Property type",
+                "description": "Apartment, house, land, office, and similar",
+                "example": "Departamentos"
+            },
+            "operation": {
+                "type": "string",
+                "title": "Operation",
+                "description": "sale, rent, transfer, or temporary",
+                "example": "sale"
+            },
+            "bedrooms": {
+                "type": "integer",
+                "title": "Bedrooms",
+                "description": "Number of bedrooms",
+                "example": 3
+            },
+            "bathrooms": {
+                "type": "integer",
+                "title": "Bathrooms",
+                "description": "Number of bathrooms",
+                "example": 2
+            },
+            "parking_spaces": {
+                "type": "integer",
+                "title": "Parking spaces",
+                "description": "Number of parking spaces",
+                "example": 2
+            },
+            "construction_area_m2": {
+                "type": "number",
+                "title": "Construction area (m2)",
+                "description": "Built area in square metres",
+                "example": 330
+            },
+            "neighborhood": {
+                "type": "string",
+                "title": "Neighborhood",
+                "description": "Neighborhood or zone",
+                "example": "Polanco"
+            },
+            "city": {
+                "type": "string",
+                "title": "City",
+                "description": "City or municipality",
+                "example": "Miguel Hidalgo"
+            },
+            "state": {
+                "type": "string",
+                "title": "State",
+                "description": "State",
+                "example": "Ciudad de México"
+            },
+            "publisher_name": {
+                "type": "string",
+                "title": "Publisher",
+                "description": "Agency or publisher name",
+                "example": "Invest Inmuebles"
+            },
+            "publisher_url": {
+                "type": "string",
+                "title": "Publisher URL",
+                "description": "Publisher profile URL",
+                "example": "https://www.inmuebles24.com/inmobiliarias/invest-inmuebles_50184921-inmuebles.html"
+            },
+            "image": {
+                "type": "string",
+                "title": "Main image",
+                "description": "Main listing photo",
+                "example": "https://img10.naventcdn.com/avisos/photo.jpg"
+            },
+            "images": {
+                "type": "array",
+                "title": "Images",
+                "description": "Up to 10 listing photo URLs",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "description": {
+                "type": "string",
+                "title": "Description",
+                "description": "Listing description text"
+            },
+            "address": {
+                "type": "string",
+                "title": "Address",
+                "description": "Street address when the listing publishes it"
+            },
+            "latitude": {
+                "type": "number",
+                "title": "Latitude",
+                "description": "Map latitude"
+            },
+            "longitude": {
+                "type": "number",
+                "title": "Longitude",
+                "description": "Map longitude"
+            },
+            "expenses": {
+                "type": "number",
+                "title": "Maintenance fee",
+                "description": "Maintenance or HOA fee when published"
+            },
+            "expenses_currency": {
+                "type": "string",
+                "title": "Maintenance fee currency",
+                "description": "Currency of the maintenance fee"
+            },
+            "half_bathrooms": {
+                "type": "integer",
+                "title": "Half bathrooms",
+                "description": "Number of half bathrooms"
+            },
+            "lot_area_m2": {
+                "type": "number",
+                "title": "Lot area (m2)",
+                "description": "Lot area in square metres"
+            },
+            "antiquity_years": {
+                "type": "number",
+                "title": "Property age",
+                "description": "Age of the property in years"
+            },
+            "posting_code": {
+                "type": "string",
+                "title": "Posting code",
+                "description": "Publisher reference code"
+            },
+            "posting_type": {
+                "type": "string",
+                "title": "Posting type",
+                "description": "Individual property or development"
+            },
+            "status": {
+                "type": "string",
+                "title": "Status",
+                "description": "Listing status"
+            },
+            "has_video": {
+                "type": "boolean",
+                "title": "Has video",
+                "description": "Whether the listing includes a video"
+            },
+            "has_tour": {
+                "type": "boolean",
+                "title": "Has virtual tour",
+                "description": "Whether the listing includes a virtual tour"
+            },
+            "published_at": {
+                "type": "string",
+                "title": "Published at",
+                "description": "Source publication date when supplied"
+            },
+            "last_modified_at": {
+                "type": "string",
+                "title": "Last modified",
+                "description": "Source modification timestamp when supplied"
+            },
+            "search_url": {
+                "type": "string",
+                "title": "Search URL",
+                "description": "Search that produced the record"
+            },
+            "source": {
+                "type": "string",
+                "title": "Source",
+                "description": "Data source name",
+                "example": "inmuebles24"
+            },
+            "scraped_at": {
+                "type": "string",
+                "title": "Collected at",
+                "description": "ISO timestamp for when the record was collected",
+                "example": "2026-10-28T10:00:00.000Z"
+            }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "title",
+                    "price",
+                    "currency",
+                    "property_type",
+                    "operation",
+                    "bedrooms",
+                    "bathrooms",
+                    "parking_spaces",
+                    "construction_area_m2",
+                    "neighborhood",
+                    "city",
+                    "state",
+                    "publisher_name",
+                    "image",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "price": {
+                        "label": "Price",
+                        "format": "number"
+                    },
+                    "currency": {
+                        "label": "Currency",
+                        "format": "text"
+                    },
+                    "property_type": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "operation": {
+                        "label": "Operation",
+                        "format": "text"
+                    },
+                    "bedrooms": {
+                        "label": "Bedrooms",
+                        "format": "number"
+                    },
+                    "bathrooms": {
+                        "label": "Bathrooms",
+                        "format": "number"
+                    },
+                    "parking_spaces": {
+                        "label": "Parking",
+                        "format": "number"
+                    },
+                    "construction_area_m2": {
+                        "label": "Built m2",
+                        "format": "number"
+                    },
+                    "neighborhood": {
+                        "label": "Neighborhood",
+                        "format": "text"
+                    },
+                    "city": {
+                        "label": "City",
+                        "format": "text"
+                    },
+                    "state": {
+                        "label": "State",
+                        "format": "text"
+                    },
+                    "publisher_name": {
+                        "label": "Publisher",
+                        "format": "text"
+                    },
+                    "image": {
+                        "label": "Image",
+                        "format": "image"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

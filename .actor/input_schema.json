@@ -1,0 +1,135 @@
+{
+    "title": "Inmuebles24 Scraper",
+    "description": "Collect property listings from Inmuebles24. Paste a search URL, or enter a location and filters to build the search.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrl": {
+            "title": "Search URL",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Any Inmuebles24 search results URL, including its filters and page number. Used when Location is empty. Example: https://www.inmuebles24.com/departamentos-en-venta-en-polanco.html",
+            "default": "https://www.inmuebles24.com/departamentos-en-venta.html",
+            "prefill": "https://www.inmuebles24.com/departamentos-en-venta.html"
+        },
+        "location": {
+            "title": "Location",
+            "type": "string",
+            "editor": "textfield",
+            "description": "City, neighborhood, or state, for example Polanco, Guadalajara, or Jalisco. When filled, this overrides the URL and the filters below define the search."
+        },
+        "operation": {
+            "title": "Operation",
+            "type": "string",
+            "editor": "select",
+            "description": "Sale, rent, transfer, or temporary/vacation. Used with Location.",
+            "default": "venta",
+            "enum": ["venta", "renta", "traspaso", "temporal-vacacional"],
+            "enumTitles": ["Sale", "Rent", "Transfer", "Temporary or vacation"]
+        },
+        "propertyType": {
+            "title": "Property type",
+            "type": "string",
+            "editor": "select",
+            "description": "Property type for the Location search.",
+            "default": "departamentos",
+            "enum": [
+                "departamentos",
+                "casas",
+                "casas-en-condominio",
+                "terrenos",
+                "oficinas",
+                "locales-comerciales",
+                "bodegas-galpones",
+                "edificios",
+                "quintas",
+                "ranchos",
+                "suites",
+                "consultorios",
+                "departamentos-compartidos",
+                "todos"
+            ],
+            "enumTitles": [
+                "Apartments",
+                "Houses",
+                "Houses in gated communities",
+                "Land",
+                "Offices",
+                "Commercial units",
+                "Warehouses",
+                "Buildings",
+                "Country houses",
+                "Ranches",
+                "Suites",
+                "Consulting rooms",
+                "Shared apartments",
+                "All property types"
+            ]
+        },
+        "minPrice": {
+            "title": "Minimum price (MXN)",
+            "type": "integer",
+            "editor": "number",
+            "description": "Lowest listing price in Mexican pesos. Used with Location."
+        },
+        "maxPrice": {
+            "title": "Maximum price (MXN)",
+            "type": "integer",
+            "editor": "number",
+            "description": "Highest listing price in Mexican pesos. Used with Location."
+        },
+        "bedroomsMin": {
+            "title": "Minimum bedrooms",
+            "type": "integer",
+            "editor": "number",
+            "description": "Smallest number of bedrooms. Used with Location."
+        },
+        "bathroomsMin": {
+            "title": "Minimum bathrooms",
+            "type": "integer",
+            "editor": "number",
+            "description": "Smallest number of bathrooms. Used with Location."
+        },
+        "parkingMin": {
+            "title": "Minimum parking spaces",
+            "type": "integer",
+            "editor": "number",
+            "description": "Smallest number of parking spaces. Used with Location."
+        },
+        "publishedWithinDays": {
+            "title": "Published within (days)",
+            "type": "integer",
+            "editor": "number",
+            "description": "Only listings published in the last N days. Used with Location."
+        },
+        "results_wanted": {
+            "title": "Maximum results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Maximum number of listings to save.",
+            "minimum": 1,
+            "default": 20
+        },
+        "max_pages": {
+            "title": "Maximum pages",
+            "type": "integer",
+            "editor": "number",
+            "description": "Safety cap on search pages. Each page holds up to 30 listings.",
+            "minimum": 1,
+            "default": 10
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "editor": "proxy",
+            "description": "Residential proxy access is recommended. The Actor uses a stealth browser to clear the site check, then reads the listing API directly.",
+            "default": {
+                "useApifyProxy": true,
+                "apifyProxyGroups": ["RESIDENTIAL"],
+                "apifyProxyCountry": "MX"
+            }
+        }
+    },
+    "required": [],
+    "additionalProperties": false
+}
